@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      oracle:
+        hibernate:
+          dialect: org.hibernate.dialect.OracleDialect
+      postgres:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    postgres:
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: qwerty
+      driver-class-name: org.postgresql.Driver
+
+    oracle:
+      jdbc-url: jdbc:oracle:thin:@localhost:1521:XE
+      username: system
+      password: 123456789
+      driver-class-name: oracle.jdbc.OracleDriver
